@@ -49,8 +49,9 @@ function addGridListen() {
  resizeBtn.addEventListener('click', (e) => {
     while ( container.firstChild ) container.removeChild( container.firstChild );
 
-    let newSize = parseInt(prompt('Enter a number of rows and cols'))
-    makeRows(newSize, newSize)
+    let newRow = parseInt(prompt('Enter a number of rows'))
+    let newCol = parseInt(prompt('Enter a number of Columns'))
+    makeRows(newRow, newCol)
     addGridListen()
    
  })
