@@ -1,29 +1,65 @@
 
 
 :root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
+  --grid-cols: 1;
+  --grid-rows: 1;
+  --main-bg-color: #FFF1DC;
+  --box-fill-color: #3A98B9;
   
-  #container {
-    display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    border: 1px solid black;
-  }
-  
-  .grid-item {
-    padding: 1rem;
-    border: 1px solid #ddd;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+      font-size: 2rem;
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+      letter-spacing: 1rem;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  border: 1px solid black;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  background-color: #E8D5C4;
+  padding: 1rem 2rem;
+  margin: .5rem;
+  border: 1px solid white;
+}
+
+.controls button:hover {
+  opacity: 0.9;
+  cursor: pointer;r
+}
+
+.grid-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.grid-item-hover {
+  background-color: var(--box-fill-color);
+
+}
+
+h1 {
     text-align: center;
-  }
-
-  .grid-item-hover {
-    background-color: purple;
-
-  }
-
-  h1 {
-      text-align: center;
-  }
+}
 
